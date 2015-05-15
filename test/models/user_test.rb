@@ -3,7 +3,8 @@ require 'test_helper'
 class UserTest < ActiveSupport::TestCase
 
 	def setup
-		@user = User.new(name: "Bill Donavan", username: "Billy_D", email: "billyg@gmail.com")
+		@user = User.new(name: "Bill Donavan", username: "Billy_D", email: "billyg@gmail.com",
+												password: "password", password_confirmation: "password")
 	end
 
 	test "Make sure user is valid" do
@@ -54,5 +55,6 @@ class UserTest < ActiveSupport::TestCase
 	      assert_not @user.valid?, "#{invalid_address.inspect} should be invalid"
 	  end 
 	end
+
 
 end
