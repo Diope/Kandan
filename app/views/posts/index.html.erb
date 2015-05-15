@@ -1,3 +1,9 @@
+<%= form_tag('/post', method: :get) do  %>
+	<%= text_field_tag(:search) %>
+	<%= submit_tag("Search") %>	
+<% end %>
+  
+
 <% @posts.each do |post| %>
-<h2><%= link_to post.title, post %></h2>
+	<h2><%= link_to post.title, post %></h2>
 <% end %>

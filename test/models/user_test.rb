@@ -56,5 +56,16 @@ class UserTest < ActiveSupport::TestCase
 	  end 
 	end
 
+	test "password fields should not be blank" do
+		@user.password = " "
+		@user.password_confirmation = " "
+		assert_not @user.valid?
+	end
+
+	test "password should be greater than 5" do
+		@user.password = "a" * 4
+		assert_not @user.valid?
+	end
+
 
 end
