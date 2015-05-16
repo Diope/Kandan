@@ -1,9 +1,10 @@
 <%= form_tag('/posts', method: :get) do  %>
 	<%= text_field_tag(:search) %>
-	<%= submit_tag("Search") %>	
+	<%= submit_tag("Search", class: 'btn btn-primary') %>	
 <% end %>
-  
+<br>
+<%= link_to "New Post", new_post_path %>  
 
-<% @posts.each do |post| %>
+<% @post.each do |post| %>
 	<h2><%= link_to post.title, post %></h2>
 <% end %>

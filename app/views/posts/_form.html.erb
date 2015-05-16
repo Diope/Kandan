@@ -1,0 +1,17 @@
+<%= simple_form_for @post do |f| %>
+	<% if @post.errors.any? %>
+		<h3><%= pluralize(@post.errors.count, "Error") %> Prevents this post from being saved</h3>
+
+		<ul>
+			<% @post.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+			<% end %>
+		</ul>
+	<% end %>
+
+	<%= f.input :title %>
+	<%= f.input :url %>
+	<%= f.input :content, as: :text %>
+	<%= f.button :submit %>
+
+<% end %>
