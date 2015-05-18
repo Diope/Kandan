@@ -5,7 +5,7 @@ use and enjoy. This is a work in progress.
 
 # Current Progress
 * Have implemented authorization/authentication, have yet to style and incorporate it into the app
-* Currently working on getting a simplistic search on the index page that allows users to search for posts...not sure how that's going to play with the translate service.
+* ~~Currently working on getting a simplistic search on the index page that allows users to search for posts...not sure how that's going to play with the translate service.~~ Search has been added. Sleeping for a few hours then looking at your code does wonders.
 * Simplistic interface created utilizing Bootstrap
 
 # Stack being utilized
