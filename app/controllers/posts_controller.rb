@@ -27,12 +27,18 @@ class PostsController < ApplicationController
 	end
 
 	def edit
+		@post = Post.find(params[:id])
 	end
 
 	def update
+		@post = Post.find(params[:id])
+		@post.update_attributes(post_params)
+		flash.now[:success] = "Post has been updated"
+		redirect_to @post
 	end
 
 	def destroy
+		@post.destroy
 	end
 
 	private
