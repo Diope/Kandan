@@ -1,5 +1,4 @@
 
 <h1><%= @post.title %></h1>
-<p><%= @post.url %></p>
 <p><%= simple_format @post.content %></p>
 <%= link_to "New Post", new_post_path %> | <%= link_to "Edit Post", edit_post_path %> | <%= link_to "All Posts", root_path  %>

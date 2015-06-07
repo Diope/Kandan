@@ -9,12 +9,9 @@
 <br>
 <%= link_to "New Post", new_post_path %>  
 
-<% @post.each do |post| %>
-	<h2><%= link_to post.title, post %></h2>
-	<h5>Posted <%= time_ago_in_words(post.created_at) %> ago</h5> 
 
-	<% unless post.updated_at == post.created_at %>
-	<small>Edited <%= time_ago_in_words(post.updated_at) %> ago</small>
+<ul class="list-group">
+	<% @post.each do |post| %>
+		<li class="list-group-item"><h2><%= link_to post.title, post %></h2></li>
 	<% end %>
-
-<% end %>
+</ul>
